@@ -10,7 +10,7 @@ import java.util.List;
 public class Screen {
 
     //显示主界面
-    public void mianScreen(List<ZhengCe> zhengCeList,ZhengCe zhengCe1,ZhengCe zhengCe2){
+    public void mainScreen(List<ZhengCe> zhengCeList,ZhengCe zhengCe1,ZhengCe zhengCe2){
         //显示界面代码
         System.out.println("==================================================");
         System.out.println("欢迎使用本系统，根据相关提示进行输入操作，输入1则进行购买商品，输入2则添加商品，输入3则选择提供的优惠折扣");
@@ -19,13 +19,13 @@ public class Screen {
         for (ZhengCe zhengCe : zhengCeList) {
             //优惠政策
             if (zhengCe.getId().equals(zhengCe1.getId())){
-                sb.append(zhengCe1.getText()+"，");
+                sb.append(zhengCe1.getText()).append("，");
             }
             if (zhengCe.getId().equals(zhengCe2.getId())){
-                sb.append(zhengCe2.getText()+"，");
+                sb.append(zhengCe2.getText()).append("，");
             }
         }
-        if (sb.length()>0){
+        if (!sb.isEmpty()){
             sb.replace(sb.length()-1,sb.length(),"。");
             System.out.println(sb);
         }else {
@@ -57,13 +57,13 @@ public class Screen {
         for (ZhengCe zhengCe : zhengCeList) {
             //优惠政策
             if (zhengCe.getId().equals(zhengCe1.getId())){
-                sb.append(zhengCe1.getText()+"，");
+                sb.append(zhengCe1.getText()).append("，");
             }
             if (zhengCe.getId().equals(zhengCe2.getId())){
-                sb.append(zhengCe2.getText()+"，");
+                sb.append(zhengCe2.getText()).append("，");
             }
         }
-        if (sb.length()>0){
+        if (!sb.isEmpty()){
             sb.replace(sb.length()-1,sb.length(),"。");
             System.out.println(sb);
         }else {

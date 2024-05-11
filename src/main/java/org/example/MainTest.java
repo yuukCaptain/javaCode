@@ -70,7 +70,7 @@ public class MainTest {
         //模拟spring boot 启动
         while (true) {
             //主界面
-            screen.mianScreen(zhengCeList, zhengCe1, zhengCe2);
+            screen.mainScreen(zhengCeList, zhengCe1, zhengCe2);
             System.out.println("请输入相关操作:");
             Scanner scanner = new Scanner(System.in);
 
